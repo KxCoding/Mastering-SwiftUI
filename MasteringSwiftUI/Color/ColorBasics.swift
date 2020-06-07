@@ -32,8 +32,6 @@ struct ColorBasics: View {
          
          //
       }
-      .background(Color(UIColor.systemBackground))
-      
    }
 }
 
