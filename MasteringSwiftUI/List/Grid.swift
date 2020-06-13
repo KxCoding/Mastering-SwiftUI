@@ -32,16 +32,7 @@ struct Grid: View {
             .font(.largeTitle)
          
          //
-         VStack(spacing: 30) {
-            ForEach(0..<3) { row in
-               HStack(spacing: 30) {
-                  ForEach(0..<2) { col in
-                     GridItem(product: self.items[row * 3 + col])
-                        .frame(width: 150, height: 150)
-                  }
-               }
-            }
-         }
+         
          //
       }
    }
