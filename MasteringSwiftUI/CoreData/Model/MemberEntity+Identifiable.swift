@@ -23,7 +23,7 @@
 
 import SwiftUI
 
-extension MemberEntity: Identifiable {
+extension MemberEntity {
    public var id: String {
       return name ?? ""
    }
