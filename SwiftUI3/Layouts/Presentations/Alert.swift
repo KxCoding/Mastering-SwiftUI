@@ -23,30 +23,26 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct Alert_Tutorials: View {
+    @State private var message = ""
+    
+    var body: some View {
+        VStack {
+            Text(message)
+                .font(.largeTitle)
+            
+            Button {
+                
+            } label: {
+                Text("Show Alert")
+            }
+            .padding()
+        }
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct Alert_Previews: PreviewProvider {
+    static var previews: some View {
+        Alert_Tutorials()
+    }
 }

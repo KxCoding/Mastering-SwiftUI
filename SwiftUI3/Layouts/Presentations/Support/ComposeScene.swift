@@ -20,33 +20,34 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct ComposeScene: View {
+    @Binding var edited: Bool
+    @State private var title: String = ""
+    @State private var content: String = ""
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                TextField("Title", text: $title)
+                    .onChange(of: title) { _ in
+                        edited = title != "" || content != ""
+                    }
+                
+                TextEditor(text: $content)
+                    .onChange(of: title) { _ in
+                        edited = title != "" || content != ""
+                    }
+            }
+            .navigationTitle("Compose")            
+        }
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct ComposeScene_Previews: PreviewProvider {
+    static var previews: some View {
+        ComposeScene(edited: .constant(false))
+    }
 }

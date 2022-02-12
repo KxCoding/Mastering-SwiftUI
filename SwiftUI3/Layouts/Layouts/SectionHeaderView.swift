@@ -20,33 +20,16 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct SectionHeaderView: View {
+    var body: some View {
+        Text("Hello, World!")
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct SectionHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        SectionHeaderView()
+    }
 }

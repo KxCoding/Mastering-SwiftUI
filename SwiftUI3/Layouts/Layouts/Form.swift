@@ -23,30 +23,33 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct Form_Tutorials: View {
+    @State private var email = ""
+    @State private var password = ""
+    @State private var address = ""
+    @State private var age = 0
+    @State private var receiveEmail = false
+    
+    var body: some View {
+        VStack {
+            TextField("Email", text: $email)
+            SecureField("Password", text: $password)
+            TextField("Address", text: $address)
+            
+            Stepper("Age: \(age)", value: $age)
+            Toggle(isOn: $receiveEmail, label: { Text("Receive Email") })
+            
+            Button("확인") {
+                
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+        }
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct Form_Previews: PreviewProvider {
+    static var previews: some View {
+        Form_Tutorials()
+    }
 }

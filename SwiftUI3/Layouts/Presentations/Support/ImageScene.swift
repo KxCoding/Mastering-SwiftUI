@@ -23,30 +23,28 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct ImageScene: View {
+    var body: some View {
+        Image("big-photo")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .ignoresSafeArea()
+            .overlay(alignment: .top) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "x.circle")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+            }
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct ImageScene_Previews: PreviewProvider {
+    static var previews: some View {
+        ImageScene()
+    }
 }

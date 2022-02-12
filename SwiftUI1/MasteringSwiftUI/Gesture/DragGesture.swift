@@ -25,13 +25,34 @@ import SwiftUI
 
 struct Gesture_DragGesture: View {
    
+    @State private var currentTranslation = CGSize.zero
+    @State private var finalTranslation = CGSize.zero
+    
    var body: some View {
       VStack {
+          Text(currentTranslation.debugDescription)
          Circle()
+              
             .foregroundColor(.yellow)
             .frame(width: 100, height: 100)
+            .offset(finalTranslation)
+            .offset(currentTranslation)
+            .gesture(dragGesture)
+            
       }
    }
+    
+    var dragGesture: some Gesture {
+       DragGesture()
+          .onChanged { value in
+             self.currentTranslation = value.translation // 나중에
+          }
+          .onEnded { value in
+              self.finalTranslation.width += value.translation.width
+              self.finalTranslation.height += value.translation.height
+             self.currentTranslation = .zero // 나중에
+          }
+    }
 }
 
 struct Gesture_DragGesture_Previews: PreviewProvider {

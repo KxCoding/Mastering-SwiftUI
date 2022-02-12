@@ -23,30 +23,18 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
-}
-
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct ColorData: Identifiable {
+    var id: String {
+        return title
+    }
+    let title: String
+    let color: Color
+    
+    static let samples = [
+        ColorData(title: "Red", color: .red),
+        ColorData(title: "Green", color: .green),
+        ColorData(title: "Blue", color: .blue),
+        ColorData(title: "Yellow", color: .yellow),
+        ColorData(title: "Pink", color: .pink)
+    ]
 }

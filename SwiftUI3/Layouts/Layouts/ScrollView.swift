@@ -23,30 +23,27 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct ScrollView_Tutorials: View {
+    var body: some View {
+        VStack {
+            EmojiView(emoji: "😀")
+            EmojiView(emoji: "😍")
+            EmojiView(emoji: "😎")
+
+            EmojiView(emoji: "🐶")
+            EmojiView(emoji: "🐱")
+            EmojiView(emoji: "🐯")
+
+            EmojiView(emoji: "🍎")
+            EmojiView(emoji: "🍌")
+            EmojiView(emoji: "🍓")
+        }
+        .frame(maxWidth: .infinity)
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct ScrollView_Previews: PreviewProvider {
+    static var previews: some View {
+        ScrollView_Tutorials()
+    }
 }

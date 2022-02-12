@@ -23,30 +23,25 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
+struct NumberView: View {
+    let number: Int
+    
+    init(number: Int) {
+        self.number = number
+        print("NumberView \(number) initialized")
+    }
+    
+    var body: some View {
+        Text("\(number)")
             .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+            .frame(width: 150, height: 150)
+            .background(.yellow)
+            .clipShape(Circle())
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct NumberView_Previews: PreviewProvider {
+    static var previews: some View {
+        NumberView(number: 1)
+    }
 }

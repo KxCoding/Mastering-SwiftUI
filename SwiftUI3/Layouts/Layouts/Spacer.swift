@@ -23,30 +23,42 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct Spacer_Tutorials: View {
+    var body: some View {
+        VStack(spacing: 0) { // #6
+            HStack {
+                Image(systemName: "suit.heart.fill")
+                    .resizable()
+                    .frame(width: 70, height: 70)
+                    .foregroundColor(.white)
+                
+                // #3
+            }
+            .padding()
+            .background(Color.blue)
+            
+            // #1
+            
+            VStack {
+                // #5
+                
+                Image(systemName: "suit.spade.fill")
+                    .resizable()
+                    .frame(width: 70, height: 70)
+                    .foregroundColor(.white)
+                
+                // #4
+            }
+            .padding()
+            .background(Color.red)
+            
+            // #2
+        }
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct Spacer_Previews: PreviewProvider {
+    static var previews: some View {
+        Spacer_Tutorials()
+    }
 }

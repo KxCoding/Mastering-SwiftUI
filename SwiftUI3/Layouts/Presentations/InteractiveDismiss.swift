@@ -23,30 +23,24 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct InteractiveDismiss: View {
+    @State private var showComposer = false
+    
+    var body: some View {
+        Button {
+            showComposer = true
+        } label: {
+            Text("Show Me!")
+        }
+        .padding()        
+        .sheet(isPresented: $showComposer, onDismiss: nil) {
+            ComposeScene(edited: .constant(false))
+        }
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct InteractiveDismiss_Previews: PreviewProvider {
+    static var previews: some View {
+        InteractiveDismiss()
+    }
 }

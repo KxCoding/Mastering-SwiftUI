@@ -23,30 +23,25 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
+struct SupportNavigationLink<Content: View>: View {
+   let content: Content
+   let title: String
+   
+   init(_ title: String, @ViewBuilder content: () -> Content) {
+      self.title = title
+      self.content = content()
+   }
    
    var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
+      NavigationLink(destination: content.navigationBarTitle(title)) {
+         Text(title)
       }
    }
 }
 
-struct View_Button_Previews: PreviewProvider {
+struct SupportNavigationLink_Previews: PreviewProvider {
    static var previews: some View {
-      View_Button()
+      SupportNavigationLink("Text", content: { Text("Text") })
    }
 }
+

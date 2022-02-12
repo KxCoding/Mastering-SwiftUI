@@ -23,30 +23,47 @@
 
 import SwiftUI
 
-struct View_Button: View {
-   @State private var value = Int.random(in: 1...100)
-   
-   var body: some View {
-      VStack {
-         Spacer()
-         
-         Text("Random Number")
-            .font(.largeTitle)
-          
-          
-         
-         Text("\(value)")
-            .font(.system(size: 200))
-         
-         Spacer()
-         
-         // #1         
-      }
-   }
+struct ZStack_Tutorials: View {
+    var body: some View {
+        HStack {
+            heart
+            club
+            spade
+            diamond
+        }
+    }
+    
+    private var heart: some View {
+        Image(systemName: "suit.heart.fill")
+            .resizable()
+            .frame(width: 50, height: 50)
+            .foregroundColor(.red)
+    }
+    
+    private var club: some View {
+        Image(systemName: "suit.club.fill")
+            .resizable()
+            .frame(width: 100, height: 100)
+            .foregroundColor(.black)
+    }
+    
+    private var spade: some View {
+        Image(systemName: "suit.spade.fill")
+            .resizable()
+            .frame(width: 50, height: 50)
+            .foregroundColor(.black)
+    }
+    
+    private var diamond: some View {
+        Image(systemName: "suit.diamond.fill")
+            .resizable()
+            .frame(width: 200, height: 200)
+            .foregroundColor(.red)
+    }
 }
 
-struct View_Button_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Button()
-   }
+struct ZStack_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack_Tutorials()
+    }
 }
