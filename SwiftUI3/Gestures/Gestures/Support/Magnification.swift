@@ -23,36 +23,22 @@
 
 import SwiftUI
 
-struct ExclusiveGestureMenu: View {
-    @Binding var currentGestureType: GestureType
+class Magnification: ObservableObject {
+    private var latestScale: CGFloat = 1.0
+    @Published var finalScale: CGFloat = 1.0
     
-    var body: some View {
-        HStack {
-            Button {
-                self.currentGestureType = .rotation
-            } label: {
-                Label("Rotation", systemImage: "arrow.2.circlepath")                
-                .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
+    var gesture: some Gesture {
+        MagnificationGesture()
+            .onChanged { value in
+                let delta = value / self.latestScale
+                self.latestScale = value
+                
+                self.finalScale *= delta
             }
-                .padding()
-                .background(currentGestureType == .rotation ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            
-            Button(action: {
-                self.currentGestureType = .magnification
-            }, label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    
-                    Text("Magnification")
-                }
-                .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
-            })
-                .padding()
-                .background(currentGestureType == .magnification ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-        }
-        .padding()
+            .onEnded { value in
+                self.latestScale = 1.0
+            }
     }
 }
+
 

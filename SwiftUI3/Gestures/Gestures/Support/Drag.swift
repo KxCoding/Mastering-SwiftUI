@@ -23,36 +23,23 @@
 
 import SwiftUI
 
-struct ExclusiveGestureMenu: View {
-    @Binding var currentGestureType: GestureType
+class Drag: ObservableObject {
+    @Published var currentTranslation = CGSize.zero
+    @Published var totalTranslation = CGSize.zero
+    @Published var activated = false
     
-    var body: some View {
-        HStack {
-            Button {
-                self.currentGestureType = .rotation
-            } label: {
-                Label("Rotation", systemImage: "arrow.2.circlepath")                
-                .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
+    var gesture: some Gesture {
+        DragGesture()
+            .onChanged { value in
+                self.currentTranslation = value.translation
+                self.activated = true
             }
-                .padding()
-                .background(currentGestureType == .rotation ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            
-            Button(action: {
-                self.currentGestureType = .magnification
-            }, label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    
-                    Text("Magnification")
-                }
-                .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
-            })
-                .padding()
-                .background(currentGestureType == .magnification ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-        }
-        .padding()
+            .onEnded { value in
+                self.activated = false
+                self.currentTranslation = .zero
+                self.totalTranslation.width += value.translation.width
+                self.totalTranslation.height += value.translation.height
+            }
     }
 }
 

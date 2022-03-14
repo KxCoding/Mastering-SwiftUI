@@ -23,36 +23,31 @@
 
 import SwiftUI
 
-struct ExclusiveGestureMenu: View {
-    @Binding var currentGestureType: GestureType
+struct TapGesture_Tutorials: View {
+    @State private var tapCount = 0
     
     var body: some View {
-        HStack {
-            Button {
-                self.currentGestureType = .rotation
-            } label: {
-                Label("Rotation", systemImage: "arrow.2.circlepath")                
-                .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
-            }
-                .padding()
-                .background(currentGestureType == .rotation ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+        VStack {
+            Text("\(tapCount)")
+                .font(.system(size: 250))
             
-            Button(action: {
-                self.currentGestureType = .magnification
-            }, label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    
-                    Text("Magnification")
-                }
-                .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
-            })
-                .padding()
-                .background(currentGestureType == .magnification ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            HStack {
+                Image(systemName: "minus.circle")
+                    .font(.system(size: 100))
+                    .foregroundColor(.red)
+                    .padding()
+                
+                Image(systemName: "plus.circle")
+                    .font(.system(size: 100))
+                    .foregroundColor(.blue)
+                    .padding()
+            }
         }
-        .padding()
     }
 }
 
+struct TapGesture_Tutorials_Previews: PreviewProvider {
+    static var previews: some View {
+        TapGesture_Tutorials()
+    }
+}

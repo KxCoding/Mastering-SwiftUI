@@ -29,30 +29,30 @@ struct ExclusiveGestureMenu: View {
     var body: some View {
         HStack {
             Button {
-                self.currentGestureType = .rotation
+                currentGestureType = .rotation
             } label: {
-                Label("Rotation", systemImage: "arrow.2.circlepath")                
-                .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
+                Label("Rotation", systemImage: "arrow.2.circlepath")
+                    .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
+                    .padding()
             }
-                .padding()
-                .background(currentGestureType == .rotation ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            .buttonStyle(.borderedProminent)
+            .tint(currentGestureType == .rotation ? Color.blue : Color.white)
             
-            Button(action: {
-                self.currentGestureType = .magnification
-            }, label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    
-                    Text("Magnification")
-                }
-                .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
-            })
-                .padding()
-                .background(currentGestureType == .magnification ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            Button {
+                currentGestureType = .magnification
+            } label: {
+                Label("Magnification", systemImage: "magnifyingglass")
+                    .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
+                    .padding()
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(currentGestureType == .magnification ? Color.blue : Color.white)
         }
-        .padding()
     }
 }
 
+struct ExclusiveGestureMenu_Previews: PreviewProvider {
+    static var previews: some View {
+        ExclusiveGestureMenu(currentGestureType: .constant(.rotation))
+    }
+}

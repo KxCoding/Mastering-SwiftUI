@@ -23,36 +23,36 @@
 
 import SwiftUI
 
-struct ExclusiveGestureMenu: View {
-    @Binding var currentGestureType: GestureType
+struct SequenceGesture_Tutorials: View {
+    @ObservedObject var longPress = LongPress()
+    @ObservedObject var drag = Drag()
     
     var body: some View {
-        HStack {
-            Button {
-                self.currentGestureType = .rotation
-            } label: {
-                Label("Rotation", systemImage: "arrow.2.circlepath")                
-                .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
+        VStack {
+            HStack(spacing: 50) {
+                Label("Long Press", systemImage: "circle.fill")
+                    .foregroundColor(longPress.activated ? Color.green : Color.gray)
+                
+                Label("Drag", systemImage: "circle.fill")
+                    .foregroundColor(drag.activated ? Color.green : Color.gray)
             }
-                .padding()
-                .background(currentGestureType == .rotation ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding()
             
-            Button(action: {
-                self.currentGestureType = .magnification
-            }, label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    
-                    Text("Magnification")
-                }
-                .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
-            })
-                .padding()
-                .background(currentGestureType == .magnification ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            VStack {
+                Circle()
+                    .foregroundColor(.yellow)
+                    .frame(width: 100, height: 100)
+                    .offset(drag.currentTranslation)
+                    .offset(drag.totalTranslation)
+                
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .padding()
     }
 }
 
+struct SequenceGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        SequenceGesture_Tutorials()
+    }
+}

@@ -23,36 +23,40 @@
 
 import SwiftUI
 
-struct ExclusiveGestureMenu: View {
-    @Binding var currentGestureType: GestureType
+struct ExclusiveGesture_Tutorials: View {
+    @ObservedObject var rotation = Rotation()
+    @ObservedObject var magnification = Magnification()
+    @State private var currentGestureType = GestureType.rotation
+    
+    var logo: some View {
+        Image("swiftui-logo")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 200, height: 200)
+    }
     
     var body: some View {
-        HStack {
-            Button {
-                self.currentGestureType = .rotation
-            } label: {
-                Label("Rotation", systemImage: "arrow.2.circlepath")                
-                .foregroundColor(currentGestureType == .rotation ? Color.white : Color.blue)
-            }
-                .padding()
-                .background(currentGestureType == .rotation ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            
-            Button(action: {
-                self.currentGestureType = .magnification
-            }, label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    
-                    Text("Magnification")
+        VStack {
+            VStack {
+                if currentGestureType == .rotation {
+                    logo
+                        .rotationEffect(rotation.finalAngle)
+                        .scaleEffect(magnification.finalScale)
+                } else {
+                    logo
+                        .rotationEffect(rotation.finalAngle)
+                        .scaleEffect(magnification.finalScale)
                 }
-                .foregroundColor(currentGestureType == .magnification ? Color.white : Color.blue)
-            })
-                .padding()
-                .background(currentGestureType == .magnification ? Color.blue : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            ExclusiveGestureMenu(currentGestureType: $currentGestureType)
         }
-        .padding()
     }
 }
 
+struct ExclusiveGesture_Previews: PreviewProvider {
+    static var previews: some View {
+        ExclusiveGesture_Tutorials()
+    }
+}

@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B410F4B027DF59680054A66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B410F4AD27DF59670054A66E /* LaunchScreen.storyboard */; };
+		B410F4B227DF59680054A66E /* SupportNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4AE27DF59670054A66E /* SupportNavigationLink.swift */; };
+		B410F4B327DF59680054A66E /* SupportNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4AE27DF59670054A66E /* SupportNavigationLink.swift */; };
+		B410F4B427DF59680054A66E /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4AF27DF59670054A66E /* MainList.swift */; };
+		B410F4B527DF59680054A66E /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4AF27DF59670054A66E /* MainList.swift */; };
+		B410F4B827DF5D980054A66E /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4B727DF5D980054A66E /* TapGesture.swift */; };
+		B410F4B927DF5D980054A66E /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4B727DF5D980054A66E /* TapGesture.swift */; };
+		B410F4BB27DF72940054A66E /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4BA27DF72940054A66E /* LongPressGesture.swift */; };
+		B410F4BC27DF72940054A66E /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4BA27DF72940054A66E /* LongPressGesture.swift */; };
+		B410F4BE27DF7BC80054A66E /* DragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4BD27DF7BC80054A66E /* DragGesture.swift */; };
+		B410F4BF27DF7BC80054A66E /* DragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4BD27DF7BC80054A66E /* DragGesture.swift */; };
+		B410F4C127DF87D00054A66E /* MagnificationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4C027DF87D00054A66E /* MagnificationGesture.swift */; };
+		B410F4C227DF87D00054A66E /* MagnificationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4C027DF87D00054A66E /* MagnificationGesture.swift */; };
+		B410F4C427DF969F0054A66E /* RotationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4C327DF969F0054A66E /* RotationGesture.swift */; };
+		B410F4C527DF969F0054A66E /* RotationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4C327DF969F0054A66E /* RotationGesture.swift */; };
+		B410F4C827DF9C480054A66E /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4C727DF9C480054A66E /* Drag.swift */; };
+		B410F4C927DF9C480054A66E /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4C727DF9C480054A66E /* Drag.swift */; };
+		B410F4CB27DF9C980054A66E /* LongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4CA27DF9C980054A66E /* LongPress.swift */; };
+		B410F4CC27DF9C980054A66E /* LongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4CA27DF9C980054A66E /* LongPress.swift */; };
+		B410F4CE27DF9CB50054A66E /* Magnification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4CD27DF9CB50054A66E /* Magnification.swift */; };
+		B410F4CF27DF9CB50054A66E /* Magnification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4CD27DF9CB50054A66E /* Magnification.swift */; };
+		B410F4D127DF9CCE0054A66E /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D027DF9CCE0054A66E /* Rotation.swift */; };
+		B410F4D227DF9CCE0054A66E /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D027DF9CCE0054A66E /* Rotation.swift */; };
+		B410F4D427DF9CFA0054A66E /* SequenceGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D327DF9CFA0054A66E /* SequenceGesture.swift */; };
+		B410F4D527DF9CFA0054A66E /* SequenceGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D327DF9CFA0054A66E /* SequenceGesture.swift */; };
+		B410F4D727DFC8820054A66E /* SimultaneousGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D627DFC8820054A66E /* SimultaneousGesture.swift */; };
+		B410F4D827DFC8820054A66E /* SimultaneousGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D627DFC8820054A66E /* SimultaneousGesture.swift */; };
+		B410F4DA27DFCF2A0054A66E /* ExclusiveGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D927DFCF2A0054A66E /* ExclusiveGesture.swift */; };
+		B410F4DB27DFCF2A0054A66E /* ExclusiveGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4D927DFCF2A0054A66E /* ExclusiveGesture.swift */; };
+		B410F4DD27DFCF860054A66E /* ExclusiveGestureMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4DC27DFCF860054A66E /* ExclusiveGestureMenu.swift */; };
+		B410F4DE27DFCF860054A66E /* ExclusiveGestureMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4DC27DFCF860054A66E /* ExclusiveGestureMenu.swift */; };
+		B410F4E027DFD0080054A66E /* GestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4DF27DFD0080054A66E /* GestureType.swift */; };
+		B410F4E127DFD0080054A66E /* GestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410F4DF27DFD0080054A66E /* GestureType.swift */; };
+		B473EF8227DF58E6003CC49F /* GesturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473EF7227DF58E5003CC49F /* GesturesApp.swift */; };
+		B473EF8327DF58E6003CC49F /* GesturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473EF7227DF58E5003CC49F /* GesturesApp.swift */; };
+		B473EF8627DF58E6003CC49F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B473EF7427DF58E6003CC49F /* Assets.xcassets */; };
+		B473EF8727DF58E6003CC49F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B473EF7427DF58E6003CC49F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B410F4AD27DF59670054A66E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B410F4AE27DF59670054A66E /* SupportNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportNavigationLink.swift; sourceTree = "<group>"; };
+		B410F4AF27DF59670054A66E /* MainList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
+		B410F4B727DF5D980054A66E /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
+		B410F4BA27DF72940054A66E /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
+		B410F4BD27DF7BC80054A66E /* DragGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGesture.swift; sourceTree = "<group>"; };
+		B410F4C027DF87D00054A66E /* MagnificationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGesture.swift; sourceTree = "<group>"; };
+		B410F4C327DF969F0054A66E /* RotationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGesture.swift; sourceTree = "<group>"; };
+		B410F4C727DF9C480054A66E /* Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
+		B410F4CA27DF9C980054A66E /* LongPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPress.swift; sourceTree = "<group>"; };
+		B410F4CD27DF9CB50054A66E /* Magnification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magnification.swift; sourceTree = "<group>"; };
+		B410F4D027DF9CCE0054A66E /* Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation.swift; sourceTree = "<group>"; };
+		B410F4D327DF9CFA0054A66E /* SequenceGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceGesture.swift; sourceTree = "<group>"; };
+		B410F4D627DFC8820054A66E /* SimultaneousGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimultaneousGesture.swift; sourceTree = "<group>"; };
+		B410F4D927DFCF2A0054A66E /* ExclusiveGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusiveGesture.swift; sourceTree = "<group>"; };
+		B410F4DC27DFCF860054A66E /* ExclusiveGestureMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusiveGestureMenu.swift; sourceTree = "<group>"; };
+		B410F4DF27DFD0080054A66E /* GestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureType.swift; sourceTree = "<group>"; };
+		B473EF7227DF58E5003CC49F /* GesturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesApp.swift; sourceTree = "<group>"; };
+		B473EF7427DF58E6003CC49F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B473EF7927DF58E6003CC49F /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B473EF7F27DF58E6003CC49F /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B473EF8127DF58E6003CC49F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B473EF7627DF58E6003CC49F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B473EF7C27DF58E6003CC49F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B410F4B627DF59A00054A66E /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				B410F4C627DF9C320054A66E /* Support */,
+				B410F4B727DF5D980054A66E /* TapGesture.swift */,
+				B410F4BA27DF72940054A66E /* LongPressGesture.swift */,
+				B410F4BD27DF7BC80054A66E /* DragGesture.swift */,
+				B410F4C027DF87D00054A66E /* MagnificationGesture.swift */,
+				B410F4C327DF969F0054A66E /* RotationGesture.swift */,
+				B410F4D327DF9CFA0054A66E /* SequenceGesture.swift */,
+				B410F4D627DFC8820054A66E /* SimultaneousGesture.swift */,
+				B410F4D927DFCF2A0054A66E /* ExclusiveGesture.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		B410F4C627DF9C320054A66E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B410F4C727DF9C480054A66E /* Drag.swift */,
+				B410F4CA27DF9C980054A66E /* LongPress.swift */,
+				B410F4CD27DF9CB50054A66E /* Magnification.swift */,
+				B410F4D027DF9CCE0054A66E /* Rotation.swift */,
+				B410F4DF27DFD0080054A66E /* GestureType.swift */,
+				B410F4DC27DFCF860054A66E /* ExclusiveGestureMenu.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B473EF6C27DF58E5003CC49F = {
+			isa = PBXGroup;
+			children = (
+				B410F4B627DF59A00054A66E /* Gestures */,
+				B473EF7127DF58E5003CC49F /* Shared */,
+				B473EF8027DF58E6003CC49F /* macOS */,
+				B473EF7A27DF58E6003CC49F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B473EF7127DF58E5003CC49F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B473EF7227DF58E5003CC49F /* GesturesApp.swift */,
+				B473EF7427DF58E6003CC49F /* Assets.xcassets */,
+				B410F4AD27DF59670054A66E /* LaunchScreen.storyboard */,
+				B410F4AF27DF59670054A66E /* MainList.swift */,
+				B410F4AE27DF59670054A66E /* SupportNavigationLink.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B473EF7A27DF58E6003CC49F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B473EF7927DF58E6003CC49F /* Gestures.app */,
+				B473EF7F27DF58E6003CC49F /* Gestures.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B473EF8027DF58E6003CC49F /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B473EF8127DF58E6003CC49F /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B473EF7827DF58E6003CC49F /* Gestures (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B473EF8A27DF58E6003CC49F /* Build configuration list for PBXNativeTarget "Gestures (iOS)" */;
+			buildPhases = (
+				B473EF7527DF58E6003CC49F /* Sources */,
+				B473EF7627DF58E6003CC49F /* Frameworks */,
+				B473EF7727DF58E6003CC49F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gestures (iOS)";
+			productName = "Gestures (iOS)";
+			productReference = B473EF7927DF58E6003CC49F /* Gestures.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B473EF7E27DF58E6003CC49F /* Gestures (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B473EF8D27DF58E6003CC49F /* Build configuration list for PBXNativeTarget "Gestures (macOS)" */;
+			buildPhases = (
+				B473EF7B27DF58E6003CC49F /* Sources */,
+				B473EF7C27DF58E6003CC49F /* Frameworks */,
+				B473EF7D27DF58E6003CC49F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gestures (macOS)";
+			productName = "Gestures (macOS)";
+			productReference = B473EF7F27DF58E6003CC49F /* Gestures.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B473EF6D27DF58E5003CC49F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B473EF7827DF58E6003CC49F = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					B473EF7E27DF58E6003CC49F = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = B473EF7027DF58E5003CC49F /* Build configuration list for PBXProject "Gestures" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B473EF6C27DF58E5003CC49F;
+			productRefGroup = B473EF7A27DF58E6003CC49F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B473EF7827DF58E6003CC49F /* Gestures (iOS) */,
+				B473EF7E27DF58E6003CC49F /* Gestures (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B473EF7727DF58E6003CC49F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B473EF8627DF58E6003CC49F /* Assets.xcassets in Resources */,
+				B410F4B027DF59680054A66E /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B473EF7D27DF58E6003CC49F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B473EF8727DF58E6003CC49F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B473EF7527DF58E6003CC49F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B410F4D427DF9CFA0054A66E /* SequenceGesture.swift in Sources */,
+				B410F4DD27DFCF860054A66E /* ExclusiveGestureMenu.swift in Sources */,
+				B410F4E027DFD0080054A66E /* GestureType.swift in Sources */,
+				B410F4B227DF59680054A66E /* SupportNavigationLink.swift in Sources */,
+				B410F4B427DF59680054A66E /* MainList.swift in Sources */,
+				B473EF8227DF58E6003CC49F /* GesturesApp.swift in Sources */,
+				B410F4D727DFC8820054A66E /* SimultaneousGesture.swift in Sources */,
+				B410F4CE27DF9CB50054A66E /* Magnification.swift in Sources */,
+				B410F4C827DF9C480054A66E /* Drag.swift in Sources */,
+				B410F4D127DF9CCE0054A66E /* Rotation.swift in Sources */,
+				B410F4BB27DF72940054A66E /* LongPressGesture.swift in Sources */,
+				B410F4B827DF5D980054A66E /* TapGesture.swift in Sources */,
+				B410F4BE27DF7BC80054A66E /* DragGesture.swift in Sources */,
+				B410F4C127DF87D00054A66E /* MagnificationGesture.swift in Sources */,
+				B410F4C427DF969F0054A66E /* RotationGesture.swift in Sources */,
+				B410F4DA27DFCF2A0054A66E /* ExclusiveGesture.swift in Sources */,
+				B410F4CB27DF9C980054A66E /* LongPress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B473EF7B27DF58E6003CC49F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B410F4D527DF9CFA0054A66E /* SequenceGesture.swift in Sources */,
+				B410F4DE27DFCF860054A66E /* ExclusiveGestureMenu.swift in Sources */,
+				B410F4E127DFD0080054A66E /* GestureType.swift in Sources */,
+				B410F4B327DF59680054A66E /* SupportNavigationLink.swift in Sources */,
+				B410F4B527DF59680054A66E /* MainList.swift in Sources */,
+				B473EF8327DF58E6003CC49F /* GesturesApp.swift in Sources */,
+				B410F4D827DFC8820054A66E /* SimultaneousGesture.swift in Sources */,
+				B410F4CF27DF9CB50054A66E /* Magnification.swift in Sources */,
+				B410F4C927DF9C480054A66E /* Drag.swift in Sources */,
+				B410F4D227DF9CCE0054A66E /* Rotation.swift in Sources */,
+				B410F4BC27DF72940054A66E /* LongPressGesture.swift in Sources */,
+				B410F4B927DF5D980054A66E /* TapGesture.swift in Sources */,
+				B410F4BF27DF7BC80054A66E /* DragGesture.swift in Sources */,
+				B410F4C227DF87D00054A66E /* MagnificationGesture.swift in Sources */,
+				B410F4C527DF969F0054A66E /* RotationGesture.swift in Sources */,
+				B410F4DB27DFCF2A0054A66E /* ExclusiveGesture.swift in Sources */,
+				B410F4CC27DF9C980054A66E /* LongPress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B473EF8827DF58E6003CC49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B473EF8927DF58E6003CC49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B473EF8B27DF58E6003CC49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kxcoding.Gestures;
+				PRODUCT_NAME = Gestures;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B473EF8C27DF58E6003CC49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kxcoding.Gestures;
+				PRODUCT_NAME = Gestures;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B473EF8E27DF58E6003CC49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kxcoding.Gestures;
+				PRODUCT_NAME = Gestures;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B473EF8F27DF58E6003CC49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kxcoding.Gestures;
+				PRODUCT_NAME = Gestures;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B473EF7027DF58E5003CC49F /* Build configuration list for PBXProject "Gestures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B473EF8827DF58E6003CC49F /* Debug */,
+				B473EF8927DF58E6003CC49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B473EF8A27DF58E6003CC49F /* Build configuration list for PBXNativeTarget "Gestures (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B473EF8B27DF58E6003CC49F /* Debug */,
+				B473EF8C27DF58E6003CC49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B473EF8D27DF58E6003CC49F /* Build configuration list for PBXNativeTarget "Gestures (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B473EF8E27DF58E6003CC49F /* Debug */,
+				B473EF8F27DF58E6003CC49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B473EF6D27DF58E5003CC49F /* Project object */;
+}
